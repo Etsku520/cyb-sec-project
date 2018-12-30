@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <title>Sing Ups</title>
+    </head>
+    <body>
+        
+        <a th:href="@{/form}">form</a>
+        <a th:if="${admin == 1}" href="/admin">admin page</a>
+        <h1>Things</h1>
+        <div th:each="signup : ${signups}">
+            <span th:utext="${signup.name}"/>
+            <span th:utext="${signup.address}"/>
+        </div>
+    </body>
+</html>
